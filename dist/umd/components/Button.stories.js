@@ -1,19 +1,24 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(["enzyme", "enzyme-adapter-react-16", "@testing-library/jest-dom/extend-expect", "jest-enzyme"], factory);
+    define(["exports", "react", "./Button"], factory);
   } else if (typeof exports !== "undefined") {
-    factory(require("enzyme"), require("enzyme-adapter-react-16"), require("@testing-library/jest-dom/extend-expect"), require("jest-enzyme"));
+    factory(exports, require("react"), require("./Button"));
   } else {
     var mod = {
       exports: {}
     };
-    factory(global.enzyme, global.enzymeAdapterReact16, global.extendExpect, global.jestEnzyme);
+    factory(mod.exports, global.react, global.Button);
     global.undefined = mod.exports;
   }
-})(this, function (_enzyme, _enzymeAdapterReact) {
+})(this, function (exports, _react, _Button) {
   "use strict";
 
-  var Adapter = _interopRequireWildcard(_enzymeAdapterReact);
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.DefaultWithoutLabel = undefined;
+
+  var React = _interopRequireWildcard(_react);
 
   function _getRequireWildcardCache() {
     if (typeof WeakMap !== "function") return null;
@@ -67,13 +72,13 @@
     return newObj;
   }
 
-  // jest-dom adds custom jest matchers for asserting on DOM nodes.
-  // allows you to do things like:
-  // expect(element).toHaveTextContent(/react/i)
-  // learn more: https://github.com/testing-library/jest-dom
-  const adapter = Adapter;
-  (0, _enzyme.configure)({
-    adapter: new adapter.default()
+  exports.default = {
+    title: "Button",
+    component: _Button.Button
+  };
+
+  const DefaultWithoutLabel = exports.DefaultWithoutLabel = () => React.createElement(_Button.Button, {
+    label: "TESTING"
   });
 });
-//# sourceMappingURL=setupTests.js.map
+//# sourceMappingURL=Button.stories.js.map
