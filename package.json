@@ -24,7 +24,7 @@
         "typescript": "~3.7.2"
     },
     "scripts": {
-        "start-storybook": "yarn run compile-css && yarn run build-storybook && start-storybook -p 9009",
+        "start-storybook": "yarn run compile-css && start-storybook -p 9009",
         "build-storybook": "build-storybook -c .storybook -o docs",
         "eject": "react-scripts eject",
         "build:lib": "yarn run move-styles && yarn build:babel && yarn build:types && node ./scripts/copyTS.js",
