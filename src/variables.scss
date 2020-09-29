@@ -1,25 +1,18 @@
+// This file is a place for design tokens (colors, spacings, font faces etc)
+
 // Font faces
+
 @font-face {
-    font-family: "LT Trim Web";
-    src: url("../fonts/LTTrimWeb-Regular.woff") format("woff");
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: "LT Trim Web Bold";
-    src: url("../fonts/LTTrimWeb-Bold.woff") format("woff");
+    font-family: 'Open Sans Bold';
+    src: url('../fonts/OpenSans-Bold.ttf') format('truetype');
 }
 
 @font-face {
-    font-family: "Open Sans";
-    src: url("../fonts/OpenSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Open Sans Bold";
-    src: url("../fonts/OpenSans-Bold.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "Open Sans Semibold";
-    src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype");
+    font-family: 'Open Sans Semibold';
+    src: url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
 }
