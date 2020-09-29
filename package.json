@@ -22,10 +22,10 @@
         "typescript": "~3.7.2"
     },
     "scripts": {
-        "start:storybook": "yarn run build:css && start-storybook -p 9009",
-        "build:storybook": "build-storybook -c .storybook -o docs",
+        "start:storybook": "source .env && yarn run build:css && start-storybook -p 9009",
+        "build:storybook": "source .env && build-storybook -c .storybook -o docs",
         "eject": "react-scripts eject",
-        "build:lib": "yarn run move-styles && yarn build:babel && yarn build:types && node ./scripts/copyTS.js",
+        "build:lib": "source .env && yarn run move-styles && yarn build:babel && yarn build:types && node ./scripts/copyTS.js",
         "build:babel": "concurrently \"yarn build:babel:esm && yarn build:babel:umd\" \"yarn build:babel:cjs\"",
         "build:babel:cjs": "BABEL_ENV=cjs babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/js --presets=@babel/env",
         "build:babel:esm": "BABEL_ENV=esm babel --source-maps --extensions \".js,.ts,.tsx\" src --out-dir dist/esm",
