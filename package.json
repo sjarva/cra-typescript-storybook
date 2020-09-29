@@ -39,7 +39,7 @@
         "move-css-to-esm": "node-sass src/components/ -o dist/esm/components",
         "move-css-to-umd": "node-sass src/components/ -o dist/umd/components",
         "move-fonts": "cp -rv src/fonts/ dist/fonts",
-        "move-assets": "cp -rv src/assets/ dist/assets"
+        "move-assets": "cp -rv src/assets/ dist/esm/assets && cp -rv src/assets/ dist/js/assets && cp -rv src/assets/ dist/umd/assets"
     },
     "eslintConfig": {
         "extends": "react-app"
