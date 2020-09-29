@@ -24,8 +24,8 @@
         "typescript": "~3.7.2"
     },
     "scripts": {
-        "start-storybook": "yarn run compile-css && start-storybook -p 9009",
-        "build-storybook": "build-storybook -c .storybook -o docs",
+        "start:storybook": "yarn run build:css && start-storybook -p 9009",
+        "build:storybook": "build-storybook -c .storybook -o docs",
         "eject": "react-scripts eject",
         "build:lib": "yarn run move-styles && yarn build:babel && yarn build:types && node ./scripts/copyTS.js",
         "build:babel": "concurrently \"yarn build:babel:esm && yarn build:babel:umd\" \"yarn build:babel:cjs\"",
@@ -35,7 +35,7 @@
         "build:types": "tsc -p tsconfig.gen-dts.json",
         "clean": "rimraf dist",
         "develop": "yarn build:types && yarn build:babel:esm --skip-initial-build --watch --verbose",
-        "compile-css": "node-sass src/components/ -o src/components",
+        "build:css": "node-sass src/components/ -o src/components",
         "move-styles": "yarn run move-css-to-js && yarn run move-css-to-esm && yarn run move-css-to-umd && yarn run move-fonts && yarn run move-assets",
         "move-css-to-js": "node-sass src/components/ -o dist/js/components",
         "move-css-to-esm": "node-sass src/components/ -o dist/esm/components",

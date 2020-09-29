@@ -1,31 +1,34 @@
+# Skeleton repo for a design system project using CRA + TypeScript + SCSS + Storybook + GitHub Pages
+
+This repo is meant as a quick start tech set up for a design system's UI component library.
+
+## Why this repo?
+
+As a front end developer who is interested in design systems and their implementations, I've had the privilege of being a team member in projects were we're either creating a proof of concept (PoC) or an actual design system, with one or more component libraries in one or more JavaScript framework (usually React). Especially in PoC projects with limited budget and time, getting the tech stack and set up working seems to be eating unnecessary amount of time and budget. I thought it would be really nice to have a (preferably open source) repo for this, that we all could just start using.
+
+Carlos had written a good [blog post about how he sets up CRA + TS + Storybook](https://medium.com/@carlosthe19916/create-react-app-cra-and-publish-your-library-components-to-npm-typescript-storybook-67ff8fe1599e), and in this repo I've done the start in the similar way as he has, but I've added SCSS support, folders for assets and fonts, and building Storybook to `/docs`folder, so that we can easily have the Storybook instance running on GitHub pages.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn start:storybook`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Compiles SCSS files to CSS and start Storybook dev server on localhost port 9009.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### `yarn build:storybook`
 
-### `yarn test`
+Builds the Storybook files to `/docs` folder.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `yarn build:lib`
 
-### `yarn build`
+Builds the library to `dist` folder, moving all the needed assets, fonts and styles also there.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### `yarn clean`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Empties the `/dist` folder.
 
 ### `yarn eject`
 
